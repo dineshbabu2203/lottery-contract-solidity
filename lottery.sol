@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.8;  
+pragma solidity ^0.8.24;  
 
 contract lottery{
 
@@ -17,7 +17,7 @@ contract lottery{
 
     receive() external payable{
         
-        require( msg.value == 2000000000000000000,"sorry yor transaction value is not equal to 2");
+        require( msg.value == 2000000,"sorry yor transaction value is not equal to 2");
     
         addressOfBuyer.push(payable(msg.sender));
 
@@ -38,7 +38,7 @@ function totalBalance() public  view returns(uint){
 function findWinner( ) public returns(bool){
 
 
-require( msg.sender == deployerAddress , "you are not owner"); //718623
+require( msg.sender == deployerAddress , "you are not owner"); 
 
    
 
