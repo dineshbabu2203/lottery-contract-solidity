@@ -68,10 +68,6 @@ require( msg.sender == deployerAddress , "you are not owner");
 }
 
 
-// function payWinner() public payable{
-//     getter.transfer( address(this).balance);
-// }
-
 function changeOwner(address _newOwner) public returns(address){
 
     require(msg.sender == deployerAddress);
@@ -92,9 +88,6 @@ function removeAllUser() public {
     
     
     }
-
-    
-
 }
 
 
